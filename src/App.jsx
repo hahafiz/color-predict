@@ -1,8 +1,32 @@
+import { useState, useEffect } from "react";
+
+// TODO: add a timer
+// TODO: add a round number up to 5, score
+// TODO: figure out score logic -> calculate difference between hexcode vs user input -> the further the difference the lower the score
 const App = () => {
+  const [backgroundColor, setBackgroundColor] = useState("#000000");
+
+  const generateRandomColor = () => {
+    const randomColor =
+      "#" +
+      Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, "0"); // this ensure that the color is 6 characters long
+    setBackgroundColor(randomColor);
+  };
+
+  // generate color when componenet mounts
+  useEffect(() => {
+    generateRandomColor();
+  }, []);
+
   return (
     <div className="flex justify-center items-center h-screen w-screen">
-      <div className="flex-row w-full ">
-        <div className="container mx-auto px-4 py-8 bg-slate-600 min-h-[400px]"></div>
+      <div className="flex-row w-full">
+        <div
+          className="containerrounded-sm min-h-[600px]"
+          style={{ backgroundColor: backgroundColor }}
+        ></div>
         <form className="container mx-auto py-8 max-w-48">
           <label className="relative block">
             <span className="sr-only">Guess the hex code</span>
