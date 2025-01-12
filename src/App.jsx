@@ -8,6 +8,7 @@ import Scoreboard from "./components/scoreboard";
 // TODO: add a round number up to 5, score
 // TODO: figure out score logic -> calculate difference between hexcode vs user input -> the further the difference the lower the score
 // TODO: figure out how to put # input field
+// TODO: make the whole page background color as the random hexcode
 const App = () => {
   const [backgroundColor, setBackgroundColor] = useState("#000000");
   const [round, setRound] = useState(1);
