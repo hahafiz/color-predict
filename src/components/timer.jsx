@@ -32,7 +32,7 @@ const Timer = ({ onTimeUp, resetTrigger }) => {
 
   return (
     <div>
-      <p>{timeLeft} seconds</p>
+      <p>00:{timeLeft}</p>
     </div>
   );
 };
