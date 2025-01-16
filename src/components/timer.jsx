@@ -30,9 +30,13 @@ const Timer = ({ onTimeUp, resetTrigger }) => {
     return () => clearInterval(timer);
   }, [timeLeft, onTimeUp]);
 
+  const formatTime = (time) => {
+    return `00:${time.toString().padStart(2, "0")}`;
+  };
+
   return (
-    <div>
-      <p>00:{timeLeft}</p>
+    <div className="bg-slate-50 p-2 px-8 rounded-full">
+      <p>{formatTime(timeLeft)}</p>
     </div>
   );
 };

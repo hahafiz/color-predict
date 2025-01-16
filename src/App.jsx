@@ -4,9 +4,6 @@ import Timer from "./components/timer";
 import Scoreboard from "./components/scoreboard";
 
 // TODO: change name to colorGuess
-// TODO: add a timer
-// TODO: add a round number up to 5, score
-// TODO: figure out score logic -> calculate difference between hexcode vs user input -> the further the difference the lower the score
 // TODO: figure out how to put # input field
 // TODO: make the whole page background color as the random hexcode
 // TODO: add reset button
@@ -86,9 +83,12 @@ const App = () => {
       className="flex flex-col justify-between h-screen py-16 px-8"
       style={{ backgroundColor: backgroundColor }}
     >
-      <div className="flex flex-col gap-2 items-center">
-        <Scoreboard round={round} score={score} />
+      <div className="flex justify-between items-center">
+        <div className="bg-slate-50 p-2 px-8 rounded-full text-xl">
+          ColorGuess
+        </div>
         <Timer onTimeUp={handleTimeUp} resetTrigger={resetTimer} />
+        <Scoreboard round={round} score={score} />
       </div>
       <form
         onSubmit={handleSubmit}
