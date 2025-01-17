@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 
 const Timer = ({ onTimeUp, resetTrigger }) => {
   const [timeLeft, setTimeLeft] = useState(30);
+  const INITIAL_TIME = 30;
+
+  // calculate progress percentage
+  const progress = (timeLeft / INITIAL_TIME) * 100;
 
   // reset timer when resetTrigger changes
   useEffect(() => {
@@ -35,8 +39,21 @@ const Timer = ({ onTimeUp, resetTrigger }) => {
   };
 
   return (
-    <div className="bg-slate-50 p-2 px-8 rounded-full">
-      <p>{formatTime(timeLeft)}</p>
+    <div className="relative">
+      {/* Container with gradient border background */}
+      <div
+        className="bg-gradient-to-r from-slate-200 to-blue-500 p-[2px] rounded-full"
+        style={{
+          backgroundSize: `${progress}% 100%`,
+          backgroundRepeat: "no-repeat",
+          transition: "background-size 1s linear",
+        }}
+      >
+        {/* Inner content container */}
+        <div className="bg-slate-50 p-2 px-8 rounded-full text-2xl">
+          <p>{formatTime(timeLeft)}</p>
+        </div>
+      </div>
     </div>
   );
 };
