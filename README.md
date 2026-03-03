@@ -1,3 +1,21 @@
-# ColorPredict
+# ~~ColorPredict~~ -> HexPert
 
-This is just a fun project I want to do where you guess a color hex code displayed on screen!
+This is just a fun project I want to do where you guess a color hex code displayed on screen! This app will be **mobile only**.
+
+---
+
+## Features
+
+### Must-haves:
+- Tutorial screen
+- Game screen (timer, color, text field)
+- Score (point style, closer to the answer, higher the point)
+
+### Should-haves:
+- Global scoreboard (user need to enter name)
+
+### Could-haves:
+- Play with friends
+- RGB, HSL, RGBA, HSLA
+
+### Won't-haves:
