@@ -12,10 +12,10 @@ This is just a fun project I want to do where you guess a color hex code display
 - Score (point style, closer to the answer, higher the point)
 
 ### Should-haves:
-- Global scoreboard (user need to enter name)
+- Global scoreboard (user need to enter name/login)
 
 ### Could-haves:
-- Play with friends
-- RGB, HSL, RGBA, HSLA
+- Multiplayer support
+- RGB, HSL, RGBA, HSLA mode
 
 ### Won't-haves:
